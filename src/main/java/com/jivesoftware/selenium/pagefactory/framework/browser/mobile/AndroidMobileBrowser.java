@@ -47,7 +47,7 @@ public class AndroidMobileBrowser extends MobileBrowser {
     public DesiredCapabilities getDesiredCapabilities() {
         DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
         desiredCapabilities.setCapability(CapabilityType.BROWSER_NAME, browserName);
-        desiredCapabilities.setCapability("platform", platform);
+        if (platform!=null) {desiredCapabilities.setCapability("platform", platform);}
         desiredCapabilities.setCapability("platformName", platformName);
         desiredCapabilities.setCapability("platformVersion", platformVersion);
         desiredCapabilities.setCapability("deviceName", deviceName);
